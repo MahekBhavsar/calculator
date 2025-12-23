@@ -1,0 +1,71 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  max-width: 300px;
+}
+button {
+  padding: 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+/* Main Calculator Container */
+.calculator-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  max-width: 360px;
+  margin: 50px auto;
+  padding: 25px;
+  background: #2d2d30;
+  border-radius: 30px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+/* Base button style */
+button {
+  padding: 20px;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  background: #3e3e42;
+  color: #ffffff;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 0 #252526; /* 3D depth effect */
+}
+
+button:hover {
+  background: #4e4e52;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(2px);
+  box-shadow: none;
+}
+
+/* Operator Buttons (+, -, *, /) */
+button:nth-child(4n), button:nth-child(2), button:nth-child(3) {
+  background: #ff9f0a; /* Bright orange */
+  color: white;
+  box-shadow: 0 4px 0 #cc7a00;
+}
+
+/* Clear Button (C) */
+button:first-child {
+  background: #ff453a; /* Soft red */
+  box-shadow: 0 4px 0 #b32e27;
+}
+
+/* Equal Button (=) */
+button:last-child {
+  background: #32d74b; /* Vibrant green */
+  grid-column: span 1; 
+  box-shadow: 0 4px 0 #248a32;
+}
+
+/* Special styling for 0 to make it stand out */
+button:nth-last-child(2) {
+  background: #3e3e42;
+}
